@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://r3j63sytjdsn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3d0sm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndqqt"]
+size = Vector2(64, 64)
+
+[node name="Surface" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+self_modulate = Color(0.8125, 0.503796, 0.336426, 1)
+scale = Vector2(64, 64)
+texture = SubResource("CanvasTexture_3d0sm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ndqqt")

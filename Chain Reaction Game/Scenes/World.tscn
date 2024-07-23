@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjjyww6q25cjj"]
+
+[ext_resource type="PackedScene" uid="uid://r3j63sytjdsn" path="res://Scenes/Surface.tscn" id="1_7fxgv"]
+[ext_resource type="PackedScene" uid="uid://dwmnpy56lojby" path="res://Scenes/Domino.tscn" id="2_r68ei"]
+[ext_resource type="PackedScene" uid="uid://cutyf3aan48nk" path="res://Scenes/RigidBall.tscn" id="4_7aip5"]
+
+[node name="World" type="Node2D"]
+
+[node name="Surface" parent="." instance=ExtResource("1_7fxgv")]
+position = Vector2(582, 617)
+scale = Vector2(20, 1)
+
+[node name="Domino" parent="." instance=ExtResource("2_r68ei")]
+position = Vector2(148, 504)
+
+[node name="Domino2" parent="." instance=ExtResource("2_r68ei")]
+position = Vector2(249, 483)
+
+[node name="Domino3" parent="." instance=ExtResource("2_r68ei")]
+position = Vector2(346, 467)
+
+[node name="RigidBall" parent="." instance=ExtResource("4_7aip5")]
+position = Vector2(113, 102)
