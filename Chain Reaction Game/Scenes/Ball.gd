@@ -38,14 +38,14 @@ func _physics_process(delta):
     #move_and_slide()
 
 
-func _on_button_button_down():
+#func _on_button_button_down():
+    #print("Touched the ball")
+    #state = BallState.MovedByUser
+#
+#func _on_button_button_up():
+    #print("Stopped touching the ball")
+    #state = BallState.Idle
+
+func _on_mouse_entered():
     print("Touched the ball")
     state = BallState.MovedByUser
-
-func _on_button_button_up():
-    print("Stopped touching the ball")
-    state = BallState.Idle
-
-func _on_button_pressed():
-    print("button pressed")
-    pass # Replace with function body.

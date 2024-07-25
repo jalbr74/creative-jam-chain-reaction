@@ -1,31 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjjyww6q25cjj"]
+[gd_scene load_steps=4 format=3 uid="uid://cjjyww6q25cjj"]
 
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_7au4v"]
 [ext_resource type="PackedScene" uid="uid://r3j63sytjdsn" path="res://Scenes/Surface.tscn" id="1_7fxgv"]
-[ext_resource type="PackedScene" uid="uid://dwmnpy56lojby" path="res://Scenes/Domino.tscn" id="2_r68ei"]
 [ext_resource type="PackedScene" uid="uid://cutyf3aan48nk" path="res://Scenes/RigidBall.tscn" id="4_7aip5"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7au4v")
 
 [node name="Surface" parent="." instance=ExtResource("1_7fxgv")]
-position = Vector2(582, 617)
+position = Vector2(640, 615)
 scale = Vector2(20, 1)
 
-[node name="Domino" parent="." instance=ExtResource("2_r68ei")]
-position = Vector2(148, 504)
-
-[node name="Domino2" parent="." instance=ExtResource("2_r68ei")]
-position = Vector2(249, 483)
-
-[node name="Domino3" parent="." instance=ExtResource("2_r68ei")]
-position = Vector2(346, 467)
-
 [node name="RigidBall" parent="." instance=ExtResource("4_7aip5")]
-position = Vector2(44, 505)
+position = Vector2(247, 337)
 
-[node name="Button" type="Button" parent="."]
-offset_right = 349.0
-offset_bottom = 239.0
+[node name="DominoBag" type="Button" parent="."]
+offset_top = 422.0
+offset_right = 174.0
+offset_bottom = 582.0
 
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[node name="DominoReset" type="Button" parent="."]
+offset_left = 1043.0
+offset_top = 10.0
+offset_right = 1124.0
+offset_bottom = 88.0
+
+[connection signal="button_down" from="DominoBag" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="DominoBag" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="DominoReset" to="." method="_on_domino_reset_pressed"]

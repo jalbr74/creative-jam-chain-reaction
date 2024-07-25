@@ -7,6 +7,7 @@
 radius = 32.0156
 
 [node name="Ball" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_i7t47")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,12 +16,4 @@ texture = ExtResource("1_0wtnp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mloef")
 
-[node name="Button" type="Button" parent="."]
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
